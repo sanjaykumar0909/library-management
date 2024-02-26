@@ -8,7 +8,7 @@ export default function({data, selected}){
     console.log(selected)
     const sendToBkend = async ()=>{
         try {
-            const response = await axios.post('http://localhost:8000/submit-books/', filteredData);
+            const response = await axios.post('https://library-mgmt-deploy.onrender.com/submit-books/', filteredData);
             
             console.log(response.data)
         } catch (error) {

@@ -61,7 +61,7 @@ const BookForm = () => {
     }
   };
   const addToDB = async ()=>{
-    const response= await axios.post("http://localhost:8000/add-books/", toAdd)
+    const response= await axios.post("https://library-mgmt-deploy.onrender.com/add-books/", toAdd)
     if (response.data.ok){
       alert("Books successfully registered in Database")
     }

@@ -20,7 +20,7 @@ function Library() {
         const fetchData = async () => {
             try {
                 console.log("exe?")
-                const response = await axios.get('http://localhost:8000/library');
+                const response = await axios.get('https://library-mgmt-deploy.onrender.com/library');
                 setData(response.data); // Set the retrieved data to the state
                 await new Promise((resolve) => {
                   setData(prev=>prev.map(book=>({...book, publishDate: book.publishDate.substring(0,10)})));

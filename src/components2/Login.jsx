@@ -11,7 +11,7 @@ const FormComponent = () => {
     const toBackend = async (ev)=>{
         ev.preventDefault()
         try {
-            const response = await axios.post('http://localhost:8000/admin/', formData);
+            const response = await axios.post('https://library-mgmt-deploy.onrender.com/admin/', formData);
             if (response.data.ok){
               navigate(`library/`, {state: formData})
             }else{
