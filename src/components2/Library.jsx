@@ -45,7 +45,7 @@ const BookForm = () => {
       alert("publish date in future not allowed")
     }
     else{
-      let response = await axios.post("http://localhost:8000/can-add-book/",{"bookId":formData.bookId})
+      let response = await axios.post("https://library-mgmt-deploy.onrender.com/can-add-book/",{"bookId":formData.bookId})
       console.log(response)
       if (!response.data.ok){
           alert("id already exist in DB")
